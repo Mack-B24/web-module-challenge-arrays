@@ -50,7 +50,7 @@ function copy(icecream){
   const arraycopy= icecream.slice()
   return arraycopy
 }
-console.log(copy(originalFlavors))
+// console.log(copy(originalFlavors))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -65,14 +65,14 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors(icecream){
-  if (icecream < 31) {
- result = 'positive' ;
+  if (icecream.length=== 31) {
+ return true
   } else {
-result = 'NOT positive' ;
+ return false
   }
-  return result;
+  
 }
-  console.log(is31Flavors(icecream));
+  // console.log(is31Flavors(originalFlavors));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -87,10 +87,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(icecream,"Rainbow Sherbert"){
-  icecream.push("Rainbow Sherbert");
+function addFlavor(icecream, flavor){
+  icecream.unshift(flavor)
+   return icecream
 }
-console.log(icecream);
+// console.log("add flavor result",addFlavor(originalFlavors, "strawberry"))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -105,8 +106,10 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(icecream, flavor){
+ icecream.pop(flavor)
+  return icecream
+  console.log("remove flavor result",removeLastFlavor(originalFlavors, "Vanilla Burnt Almond"))
 }
 
 
@@ -123,8 +126,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(flavors,i){
+ return flavors[i]
 }
 
 
@@ -143,8 +146,9 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(icecream, flavors){
+  icecream.splice(1, 1)
+  return icecream
 }
 
 

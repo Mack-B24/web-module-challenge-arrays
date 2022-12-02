@@ -146,11 +146,19 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(icecream, flavors){
-  icecream.splice(1, 1)
+function removeFlavorByName(icecream, flavorName){
+  for(let i = 0;i < icecream.length;i++){
+    if(icecream[i]===flavorName){
+      icecream.splice(i, 1) 
+      break
+
+    }
+
+  }
+
   return icecream
 }
-
+// console.log(removeFlavorByName(originalFlavors, "Chocolate"))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -172,11 +180,20 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(icecream, flavors){
+ 
+ const lot = [];
+ for(let i = 0;i < icecream.length;i++){
+ if(icecream[i].includes(flavors)){
+  lot.push(icecream[i]);
+ }
+
+ 
+
+ }
+ return lot;
 }
-
-
+console.log(filterByWord(originalFlavors,"Chocolate"))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
